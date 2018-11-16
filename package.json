@@ -1,0 +1,36 @@
+{
+  "name": "@knora/core",
+  "version": "1.0.0-beta.9",
+  "description": "Knora ui module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dhlab-basel/Knora-ui.git"
+  },
+  "homepage": "https://dhlab-basel.github.io/Knora-ui",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "knora",
+    "digital humanities",
+    "dhlab basel"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0",
+    "json2typescript": "^1.0.5",
+    "jsonld": "^1.0.2"
+  },
+  "main": "bundles/knora-core.umd.js",
+  "module": "fesm5/knora-core.js",
+  "es2015": "fesm2015/knora-core.js",
+  "esm5": "esm5/knora-core.js",
+  "esm2015": "esm2015/knora-core.js",
+  "fesm5": "fesm5/knora-core.js",
+  "fesm2015": "fesm2015/knora-core.js",
+  "typings": "knora-core.d.ts",
+  "metadata": "knora-core.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}

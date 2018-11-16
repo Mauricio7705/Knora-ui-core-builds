@@ -1,0 +1,15 @@
+/**
+ * Represents a geometry value parsed from JSON.
+ */
+export class RegionGeometry {
+    constructor(status, lineColor, lineWidth, points, type, radius) {
+        this.status = status;
+        this.lineColor = lineColor;
+        this.lineWidth = lineWidth;
+        this.points = points;
+        this.type = type;
+        this.radius = radius;
+    }
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicmVnaW9uLWdlb21ldHJ5LmpzIiwic291cmNlUm9vdCI6Im5nOi8vQGtub3JhL2NvcmUvIiwic291cmNlcyI6WyJsaWIvZGVjbGFyYXRpb25zL2FwaS92Mi9zdGlsbC1pbWFnZS9yZWdpb24tZ2VvbWV0cnkudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUE7O0dBRUc7QUFDSCxNQUFNO0lBQ0YsWUFBbUIsTUFBYyxFQUNkLFNBQWlCLEVBQ2pCLFNBQWlCLEVBQ2pCLE1BQWlCLEVBQ2pCLElBQVksRUFDWixNQUFnQjtRQUxoQixXQUFNLEdBQU4sTUFBTSxDQUFRO1FBQ2QsY0FBUyxHQUFULFNBQVMsQ0FBUTtRQUNqQixjQUFTLEdBQVQsU0FBUyxDQUFRO1FBQ2pCLFdBQU0sR0FBTixNQUFNLENBQVc7UUFDakIsU0FBSSxHQUFKLElBQUksQ0FBUTtRQUNaLFdBQU0sR0FBTixNQUFNLENBQVU7SUFDaEMsQ0FBQztDQUNQIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtQb2ludDJEfSBmcm9tICcuL3BvaW50LTJkJztcblxuLyoqXG4gKiBSZXByZXNlbnRzIGEgZ2VvbWV0cnkgdmFsdWUgcGFyc2VkIGZyb20gSlNPTi5cbiAqL1xuZXhwb3J0IGNsYXNzIFJlZ2lvbkdlb21ldHJ5IHtcbiAgICBjb25zdHJ1Y3RvcihwdWJsaWMgc3RhdHVzOiBzdHJpbmcsXG4gICAgICAgICAgICAgICAgcHVibGljIGxpbmVDb2xvcjogc3RyaW5nLFxuICAgICAgICAgICAgICAgIHB1YmxpYyBsaW5lV2lkdGg6IG51bWJlcixcbiAgICAgICAgICAgICAgICBwdWJsaWMgcG9pbnRzOiBQb2ludDJEW10sXG4gICAgICAgICAgICAgICAgcHVibGljIHR5cGU6IHN0cmluZyxcbiAgICAgICAgICAgICAgICBwdWJsaWMgcmFkaXVzPzogUG9pbnQyRFxuICAgICkge31cbn1cbiJdfQ==

@@ -1,0 +1,16 @@
+/**
+ * Represents a sequence of resources.
+ */
+export class ReadResourcesSequence {
+    /**
+     *
+     * @param {Array<ReadResource>} resources given sequence of resources.
+     * @param {number} numberOfResources number of given resources.
+     */
+    constructor(resources, numberOfResources) {
+        this.resources = resources;
+        this.numberOfResources = numberOfResources;
+    }
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicmVhZC1yZXNvdXJjZXMtc2VxdWVuY2UuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9Aa25vcmEvY29yZS8iLCJzb3VyY2VzIjpbImxpYi9kZWNsYXJhdGlvbnMvYXBpL3YyL3Jlc291cmNlcy9yZWFkLXJlc291cmNlcy1zZXF1ZW5jZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFQTs7R0FFRztBQUNILE1BQU07SUFFRjs7OztPQUlHO0lBQ0gsWUFBNEIsU0FBOEIsRUFBa0IsaUJBQXlCO1FBQXpFLGNBQVMsR0FBVCxTQUFTLENBQXFCO1FBQWtCLHNCQUFpQixHQUFqQixpQkFBaUIsQ0FBUTtJQUNyRyxDQUFDO0NBRUoiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBSZWFkUmVzb3VyY2UgfSBmcm9tICcuL3JlYWQtcmVzb3VyY2UnO1xuXG4vKipcbiAqIFJlcHJlc2VudHMgYSBzZXF1ZW5jZSBvZiByZXNvdXJjZXMuXG4gKi9cbmV4cG9ydCBjbGFzcyBSZWFkUmVzb3VyY2VzU2VxdWVuY2Uge1xuXG4gICAgLyoqXG4gICAgICpcbiAgICAgKiBAcGFyYW0ge0FycmF5PFJlYWRSZXNvdXJjZT59IHJlc291cmNlcyBnaXZlbiBzZXF1ZW5jZSBvZiByZXNvdXJjZXMuXG4gICAgICogQHBhcmFtIHtudW1iZXJ9IG51bWJlck9mUmVzb3VyY2VzIG51bWJlciBvZiBnaXZlbiByZXNvdXJjZXMuXG4gICAgICovXG4gICAgY29uc3RydWN0b3IocHVibGljIHJlYWRvbmx5IHJlc291cmNlczogQXJyYXk8UmVhZFJlc291cmNlPiwgcHVibGljIHJlYWRvbmx5IG51bWJlck9mUmVzb3VyY2VzOiBudW1iZXIpIHtcbiAgICB9XG5cbn1cbiJdfQ==

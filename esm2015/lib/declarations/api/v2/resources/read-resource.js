@@ -1,0 +1,28 @@
+/**
+ * Represents a resource and its properties.
+ */
+export class ReadResource {
+    /**
+     *
+     * @param {string} id the resource's Iri.
+     * @param {string} type the resource's type (class).
+     * @param {string} label the resource's rdfs:label.
+     * @param {Array<ReadResource>} incomingRegions regions pointing to this resource, if any (possibly to be queried by additional requests).
+     * @param {Array<ReadResource>} incomingStillImageRepresentations still image representations pointing to this resource, if any (possibly to be queried by additional requests).
+     * @param {Array<ReadResource>} incomingLinks resources pointing to this resource, if any (possibly to be queried by additional requests).
+     * @param {StillImageRepresentation[]} stillImageRepresentationsToDisplay  still image representations to be displayed for this resource, if any (possibly to be queried by additional requests).
+     * @param {ReadProperties} properties the resources's properties.
+     */
+    constructor(id, type, label, incomingRegions, incomingStillImageRepresentations, incomingLinks, stillImageRepresentationsToDisplay, properties) {
+        this.id = id;
+        this.type = type;
+        this.label = label;
+        this.incomingRegions = incomingRegions;
+        this.incomingStillImageRepresentations = incomingStillImageRepresentations;
+        this.incomingLinks = incomingLinks;
+        this.stillImageRepresentationsToDisplay = stillImageRepresentationsToDisplay;
+        this.properties = properties;
+    }
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicmVhZC1yZXNvdXJjZS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL0Brbm9yYS9jb3JlLyIsInNvdXJjZXMiOlsibGliL2RlY2xhcmF0aW9ucy9hcGkvdjIvcmVzb3VyY2VzL3JlYWQtcmVzb3VyY2UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBR0E7O0dBRUc7QUFDSCxNQUFNO0lBRUY7Ozs7Ozs7Ozs7T0FVRztJQUNILFlBQ29CLEVBQVUsRUFDVixJQUFZLEVBQ1osS0FBYSxFQUN0QixlQUFvQyxFQUNwQyxpQ0FBc0QsRUFDdEQsYUFBa0MsRUFDbEMsa0NBQThELEVBQ3JELFVBQTJCO1FBUDNCLE9BQUUsR0FBRixFQUFFLENBQVE7UUFDVixTQUFJLEdBQUosSUFBSSxDQUFRO1FBQ1osVUFBSyxHQUFMLEtBQUssQ0FBUTtRQUN0QixvQkFBZSxHQUFmLGVBQWUsQ0FBcUI7UUFDcEMsc0NBQWlDLEdBQWpDLGlDQUFpQyxDQUFxQjtRQUN0RCxrQkFBYSxHQUFiLGFBQWEsQ0FBcUI7UUFDbEMsdUNBQWtDLEdBQWxDLGtDQUFrQyxDQUE0QjtRQUNyRCxlQUFVLEdBQVYsVUFBVSxDQUFpQjtJQUMvQyxDQUFDO0NBRUoiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBSZWFkUHJvcGVydGllcyB9IGZyb20gJy4uLy4uLy4uLyc7XG5pbXBvcnQgeyBTdGlsbEltYWdlUmVwcmVzZW50YXRpb24gfSBmcm9tICcuLi9zdGlsbC1pbWFnZS9zdGlsbC1pbWFnZS1yZXByZXNlbnRhdGlvbic7XG5cbi8qKlxuICogUmVwcmVzZW50cyBhIHJlc291cmNlIGFuZCBpdHMgcHJvcGVydGllcy5cbiAqL1xuZXhwb3J0IGNsYXNzIFJlYWRSZXNvdXJjZSB7XG5cbiAgICAvKipcbiAgICAgKlxuICAgICAqIEBwYXJhbSB7c3RyaW5nfSBpZCB0aGUgcmVzb3VyY2UncyBJcmkuXG4gICAgICogQHBhcmFtIHtzdHJpbmd9IHR5cGUgdGhlIHJlc291cmNlJ3MgdHlwZSAoY2xhc3MpLlxuICAgICAqIEBwYXJhbSB7c3RyaW5nfSBsYWJlbCB0aGUgcmVzb3VyY2UncyByZGZzOmxhYmVsLlxuICAgICAqIEBwYXJhbSB7QXJyYXk8UmVhZFJlc291cmNlPn0gaW5jb21pbmdSZWdpb25zIHJlZ2lvbnMgcG9pbnRpbmcgdG8gdGhpcyByZXNvdXJjZSwgaWYgYW55IChwb3NzaWJseSB0byBiZSBxdWVyaWVkIGJ5IGFkZGl0aW9uYWwgcmVxdWVzdHMpLlxuICAgICAqIEBwYXJhbSB7QXJyYXk8UmVhZFJlc291cmNlPn0gaW5jb21pbmdTdGlsbEltYWdlUmVwcmVzZW50YXRpb25zIHN0aWxsIGltYWdlIHJlcHJlc2VudGF0aW9ucyBwb2ludGluZyB0byB0aGlzIHJlc291cmNlLCBpZiBhbnkgKHBvc3NpYmx5IHRvIGJlIHF1ZXJpZWQgYnkgYWRkaXRpb25hbCByZXF1ZXN0cykuXG4gICAgICogQHBhcmFtIHtBcnJheTxSZWFkUmVzb3VyY2U+fSBpbmNvbWluZ0xpbmtzIHJlc291cmNlcyBwb2ludGluZyB0byB0aGlzIHJlc291cmNlLCBpZiBhbnkgKHBvc3NpYmx5IHRvIGJlIHF1ZXJpZWQgYnkgYWRkaXRpb25hbCByZXF1ZXN0cykuXG4gICAgICogQHBhcmFtIHtTdGlsbEltYWdlUmVwcmVzZW50YXRpb25bXX0gc3RpbGxJbWFnZVJlcHJlc2VudGF0aW9uc1RvRGlzcGxheSAgc3RpbGwgaW1hZ2UgcmVwcmVzZW50YXRpb25zIHRvIGJlIGRpc3BsYXllZCBmb3IgdGhpcyByZXNvdXJjZSwgaWYgYW55IChwb3NzaWJseSB0byBiZSBxdWVyaWVkIGJ5IGFkZGl0aW9uYWwgcmVxdWVzdHMpLlxuICAgICAqIEBwYXJhbSB7UmVhZFByb3BlcnRpZXN9IHByb3BlcnRpZXMgdGhlIHJlc291cmNlcydzIHByb3BlcnRpZXMuXG4gICAgICovXG4gICAgY29uc3RydWN0b3IoXG4gICAgICAgIHB1YmxpYyByZWFkb25seSBpZDogc3RyaW5nLFxuICAgICAgICBwdWJsaWMgcmVhZG9ubHkgdHlwZTogc3RyaW5nLFxuICAgICAgICBwdWJsaWMgcmVhZG9ubHkgbGFiZWw6IHN0cmluZyxcbiAgICAgICAgcHVibGljIGluY29taW5nUmVnaW9uczogQXJyYXk8UmVhZFJlc291cmNlPixcbiAgICAgICAgcHVibGljIGluY29taW5nU3RpbGxJbWFnZVJlcHJlc2VudGF0aW9uczogQXJyYXk8UmVhZFJlc291cmNlPixcbiAgICAgICAgcHVibGljIGluY29taW5nTGlua3M6IEFycmF5PFJlYWRSZXNvdXJjZT4sXG4gICAgICAgIHB1YmxpYyBzdGlsbEltYWdlUmVwcmVzZW50YXRpb25zVG9EaXNwbGF5OiBTdGlsbEltYWdlUmVwcmVzZW50YXRpb25bXSxcbiAgICAgICAgcHVibGljIHJlYWRvbmx5IHByb3BlcnRpZXM/OiBSZWFkUHJvcGVydGllcykge1xuICAgIH1cblxufVxuIl19
