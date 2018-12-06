@@ -20,13 +20,12 @@ export declare class SearchParamsService {
      * Updates the parameters of an extended search.
      *
      * @param {ExtendedSearchParams} searchParams
-     * @returns {void}
      */
     changeSearchParamsMsg(searchParams: ExtendedSearchParams): void;
     /**
      * Gets the search params of an extended search.
      *
-     * @returns {ExtendedSearchParams} search parameters
+     * @returns {ExtendedSearchParams}
      */
     getSearchParams(): ExtendedSearchParams;
 }

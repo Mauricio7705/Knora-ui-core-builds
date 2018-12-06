@@ -4,16 +4,14 @@ import { ApiService } from '../api.service';
 export declare class GroupsService extends ApiService {
     private path;
     /**
-     * Return a list of all groups.
      *
-     * @returns Observable<Group[]>
+     * @returns {Observable<Group[]>}
      */
     getAllGroups(): Observable<Group[]>;
     /**
-     * Return a group object (filter by IRI).
      *
      * @param {string} iri
-     * @returns Observable<Group>
+     * @returns {Observable<Group>}
      */
     getGroupByIri(iri: string): Observable<Group>;
 }
