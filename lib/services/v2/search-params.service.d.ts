@@ -1,31 +1,25 @@
+import { Observable } from 'rxjs';
 /**
- * Represents the parameters of an extended search.
+ * Represents teh parameters of an extended search.
  */
 export declare class ExtendedSearchParams {
-    generateGravsearch: (offset: number) => string | boolean;
+    generateGravsearch: (offset: number) => string;
     /**
      *
-     * @param generateGravsearch a function that generates a Gravsearch query.
-     *
-     *                           The function takes the offset
-     *                           as a parameter and returns a Gravsearch query string.
-     *                           Returns false if not set correctly (init state).
+     * @param generateGravsearch a function the generates KnarQL.
+     *                       The function is expected to take the offset
+     *                       as a parameter and return a KnarQL query string.
      */
-    constructor(generateGravsearch: (offset: number) => string | boolean);
+    constructor(generateGravsearch: (offset: number) => string);
 }
 export declare class SearchParamsService {
-    private _currentSearchParams;
+    private searchParamsMessage;
+    currentSearchParams: Observable<ExtendedSearchParams>;
     constructor();
     /**
-     * Updates the parameters of an extended search.
+     * Update the parameters of an extended seacrh.
      *
      * @param {ExtendedSearchParams} searchParams
      */
     changeSearchParamsMsg(searchParams: ExtendedSearchParams): void;
-    /**
-     * Gets the search params of an extended search.
-     *
-     * @returns {ExtendedSearchParams}
-     */
-    getSearchParams(): ExtendedSearchParams;
 }

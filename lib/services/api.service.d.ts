@@ -4,55 +4,50 @@ import { ApiServiceError, KuiCoreConfig } from '../declarations';
 export declare abstract class ApiService {
     http: HttpClient;
     config: KuiCoreConfig;
-    /**
-     *  if is loading, set it true;
-     *  it can be used in components
-     *  for progress loader element
-     */
     loading: boolean;
     protected constructor(http: HttpClient, config: KuiCoreConfig);
     /**
      * GET
      *
      * @param {string} path
-     * @returns {Observable<any>}
+     * @returns Observable of any
      */
     httpGet(path: string, params?: any): Observable<any>;
     /**
      * POST
      *
      * @param {string} path
-     * @param body
-     * @returns {Observable<any>}
+     * @param {any} body
+     * @returns Observable of any
      */
     httpPost(path: string, body?: any): Observable<any>;
     /**
      * PUT
      *
      * @param {string} path
-     * @param body
-     * @returns {Observable<any>}
+     * @param {any} body
+     * @returns Observable of any
      */
     httpPut(path: string, body?: any): Observable<any>;
     /**
      * DELETE
      *
      * @param {string} path
-     * @returns {Observable<any>}
+     * @returns Observable of any
      */
     httpDelete(path: string): Observable<any>;
     /**
      * handle request error in case of server error
      *
      * @param {HttpErrorResponse} error
-     * @returns {Observable<ApiServiceError>}
+     * @returns Observable of ApiServiceError
      */
     protected handleRequestError(error: HttpErrorResponse): Observable<ApiServiceError>;
     /**
      * handle json error in case of type error in json response (json2typescript)
      *
-     * @param error
-     * @returns {Observable<ApiServiceError>}
+     * @param {any} error
+     * @returns Observable of ApiServiceError
      */
     protected handleJsonError(error: any): Observable<ApiServiceError>;
 }
