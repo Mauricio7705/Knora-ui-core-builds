@@ -6,7 +6,7 @@ export declare class IncomingService extends SearchService {
     *
     * @param {string} resourceIRI the Iri of the resource whose Incoming regions should be returned.
     * @param {number} offset the offset to be used for paging. 0 is the default and is used to get the first page of results.
-    * @returns Observable of any
+    * @returns {Observable<any>}
     */
     getIncomingRegions(resourceIRI: string, offset: number): Observable<any>;
     /**
@@ -15,17 +15,15 @@ export declare class IncomingService extends SearchService {
      *
      * @param {string} resourceIri the Iri of the resource whose StillImageRepresentations should be returned.
      * @param {number} offset the offset to be used for paging. 0 is the default and is used to get the first page of results.
-     * @returns Observable of any
+     * @returns {Observable<any>}
      */
     getStillImageRepresentationsForCompoundResource(resourceIri: string, offset: number): Observable<any>;
     /**
-     *
-     * Returns all incoming links for the given resource Iri
-     * but incoming regions and still image representations.
+     * Returns all incoming links for the given resource Iri but incoming regions and still image representations.
      *
      * @param {string} resourceIri the Iri of the resource whose incoming links should be returned.
      * @param {number} offset the offset to be used for paging. 0 is the default and is used to get the first page of results.
-     * @returns Observable of any
+     * @returns {Observable<any>}
      */
     getIncomingLinksForResource(resourceIri: string, offset: number): Observable<any>;
 }

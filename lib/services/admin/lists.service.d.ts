@@ -4,45 +4,45 @@ import { ApiService } from '../api.service';
 export declare class ListsService extends ApiService {
     private path;
     /**
-     * returns a list of all lists
+     * Returns a list of all lists.
      *
-     * @param {string} projectIri (optional)
-     * @returns Observable of ListNodeInfo[]
+     * @param {string} [projectIri]
+     * @returns Observable<ListNodeInfo[]>
      */
     getLists(projectIri?: string): Observable<ListNodeInfo[]>;
     /**
-     * return a list object
+     * Return a list object.
      *
      * @param {string} listIri
-     * @returns Observable of List
+     * @returns Observable<List>
      */
     getList(listIri: string): Observable<List>;
     /**
-     * return a list info object
+     * Return a list info object.
      *
      * @param {string} listIri
-     * @returns Observable of ListInfo
+     * @returns Observable<ListInfo>
      */
     getListInfo(listIri: string): Observable<ListInfo>;
     /**
-     * return a list node info object
+     * Return a list node info object.
      *
      * @param {string} nodeIri
-     * @returns Observable of ListNodeInfo
+     * @returns Observable<ListNodeInfo>
      */
     getListNodeInfo(nodeIri: string): Observable<ListNodeInfo>;
     /**
-     * create new list
+     * Create new list.
      *
      * @param {ListCreatePayload} payload
-     * @returns Observable of List
+     * @returns Observable<List>
      */
     createList(payload: ListCreatePayload): Observable<List>;
     /**
-     * edit list data
+     * Edit list data.
      *
      * @param {ListInfoUpdatePayload} payload
-     * @returns Observable of ListInfo
+     * @returns Observable<ListInfo>
      */
     updateListInfo(payload: ListInfoUpdatePayload): Observable<ListInfo>;
 }

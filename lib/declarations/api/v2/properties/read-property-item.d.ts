@@ -160,7 +160,7 @@ export declare class ReadStillImageFileValue implements ReadPropertyItem {
     readonly imagePath: string;
     readonly dimX: number;
     readonly dimY: number;
-    constructor(id: string, propIri: any, imageFilename: string, imageServerIIIFBaseURL: string, imagePath: string, dimX: number, dimY: number, isPreview?: boolean);
+    constructor(id: string, propIri: any, imageFilename: string, imageServerIIIFBaseURL: string, imagePath: string, dimX: number, dimY: number);
     readonly type: string;
     readonly isPreview: boolean;
     makeIIIFUrl(reduceFactor: number): string;

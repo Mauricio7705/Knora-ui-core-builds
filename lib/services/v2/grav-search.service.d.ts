@@ -2,6 +2,10 @@ import { SearchParamsService } from './search-params.service';
 import { PropertyWithValue } from '../../declarations/api/operators';
 export declare class GravsearchGenerationService {
     private _searchParamsService;
+    /**
+     * Map of complex knora-api value types to simple ones.
+     * Use computed property name: http://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer.
+     */
     static typeConversionComplexToSimple: {
         'http://api.knora.org/ontology/knora-api/v2#IntValue': string;
         'http://api.knora.org/ontology/knora-api/v2#DecimalValue': string;
@@ -27,16 +31,16 @@ export declare class GravsearchGenerationService {
        * Converts a complex type Iri to a simple type Iri.
        *
        * @param {string} complexType the Iri of a value type (knora-api complex).
-       * @returns {string} the corresponding Iri of the simple type (knora-api simple).
+       * @returns string - the corresponding Iri of the simple type (knora-api simple).
        */
     private convertComplexTypeToSimpleType(complexType);
     /**
        * Generates a Gravsearch query from the provided arguments.
        *
        * @param {PropertyWithValue[]} properties the properties specified by the user.
-       * @param {string} mainResourceClassOption the class of the main resource, if specified.
+       * @param {string} [mainResourceClassOption] the class of the main resource, if specified.
        * @param {number} offset the offset to be used (nth page of results).
-       * @returns {string} a KnarQL query string.
+       * @returns string - a KnarQL query string.
        */
     createGravsearchQuery(properties: PropertyWithValue[], mainResourceClassOption?: string, offset?: number): string;
 }
