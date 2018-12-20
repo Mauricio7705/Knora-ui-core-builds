@@ -6,23 +6,23 @@
  */
 export declare class KuiCoreConfig {
     /**
-     * (Salsah) name of the app
+     * name of the app e.g. 'SALSAH'
      * @type {string}
      */
     name: string;
     /**
-     * (knora) url of the api
+     * url of the app e.g. 'https://salsah.org'
+     * @type {undefined}
+     */
+    app: string;
+    /**
+     * url of the api e.g. 'https://api.knora.org'
      * @type {string}
      */
     api: string;
     /**
-     * (sipi) url of media/file server
+     * url of media/file server e.g. 'https://iiif.sipi.io'
      * @type {string}
      */
     media: string;
-    /**
-     * (salsah) url of the app
-     * @type {undefined}
-     */
-    app: string;
 }

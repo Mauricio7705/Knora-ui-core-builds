@@ -1,10 +1,16 @@
 export declare class Utils {
     /**
-     * A regex to validate Emails.
+     * A regex to validate Email address.
      *
      * @type {RegExp}
      */
     static readonly RegexEmail: RegExp;
+    /**
+     * A regex to validate Username.
+     *
+     * @type {RegExp}
+     */
+    static readonly RegexUsername: RegExp;
     /**
      * A regex to validate URLs.
      *

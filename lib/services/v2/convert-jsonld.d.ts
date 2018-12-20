@@ -8,8 +8,8 @@ export declare module ConvertJSONLD {
      * Turns an API response in JSON-LD representing a sequence of resources into a [[ReadResourcesSequence]].
      * Expects JSON-LD with all Iris fully expanded.
      *
-     * @param resourcesResponseJSONLD a resource or a sequence of resources, represented as a JSON-LD object.
-     * @returns a [[ReadResourcesSequence]].
+     * @param {object} resourcesResponseJSONLD a resource or a sequence of resources, represented as a JSON-LD object.
+     * @returns ReadResourcesSequence - sequence of read resources
      */
     function createReadResourcesSequenceFromJsonLD(resourcesResponseJSONLD: object): ReadResourcesSequence;
     /**
@@ -17,7 +17,7 @@ export declare module ConvertJSONLD {
      * Expects JSON-LD with all Iris fully expanded.
      *
      * @param resourcesResponseJSONLD a sequence of resources, represented as a JSON-LD object.
-     * @returns {Array<String>} the resource class Iris (without duplicates).
+     * @returns string[] - the resource class Iris (without duplicates).
      */
     function getResourceClassesFromJsonLD(resourcesResponseJSONLD: object): string[];
 }

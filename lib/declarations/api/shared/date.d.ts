@@ -4,7 +4,7 @@
 export declare enum Precision {
     yearPrecision = 0,
     monthPrecision = 1,
-    dayPrecision = 2,
+    dayPrecision = 2
 }
 /**
  * Represents a Salsah date object with a precision information.
@@ -13,8 +13,8 @@ export declare class DateSalsah {
     readonly calendar: string;
     readonly era: string;
     readonly year: number;
-    readonly month: number;
-    readonly day: number;
+    readonly month?: number;
+    readonly day?: number;
     private static separator;
     readonly precision: Precision;
     constructor(calendar: string, era: string, year: number, month?: number, day?: number);

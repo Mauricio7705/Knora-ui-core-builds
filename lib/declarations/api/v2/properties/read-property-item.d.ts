@@ -100,10 +100,10 @@ export declare class ReadDateValue implements ReadPropertyItem {
     readonly endYear: number;
     readonly startEra: string;
     readonly endEra: string;
-    readonly startMonth: number;
-    readonly endMonth: number;
-    readonly startDay: number;
-    readonly endDay: number;
+    readonly startMonth?: number;
+    readonly endMonth?: number;
+    readonly startDay?: number;
+    readonly endDay?: number;
     constructor(id: string, propIri: any, calendar: string, startYear: number, endYear: number, startEra: string, endEra: string, startMonth?: number, endMonth?: number, startDay?: number, endDay?: number);
     readonly type: string;
     private separator;
@@ -118,7 +118,7 @@ export declare class ReadLinkValue implements ReadPropertyItem {
     readonly id: string;
     readonly propIri: any;
     readonly referredResourceIri: string;
-    readonly referredResource: ReadResource;
+    readonly referredResource?: ReadResource;
     constructor(id: string, propIri: any, referredResourceIri: string, referredResource?: ReadResource);
     readonly type: string;
     getReferredResourceInfo(ontologyInfo: OntologyInformation): string;
@@ -209,7 +209,7 @@ export declare class RegionGeometry {
     lineWidth: number;
     points: Point2D[];
     type: string;
-    radius: Point2D;
+    radius?: Point2D;
     constructor(status: string, lineColor: string, lineWidth: number, points: Point2D[], type: string, radius?: Point2D);
 }
 /**

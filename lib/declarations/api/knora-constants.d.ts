@@ -158,5 +158,5 @@ export declare class KnoraConstants {
 }
 export declare enum KnoraSchema {
     complex = 0,
-    simple = 1,
+    simple = 1
 }

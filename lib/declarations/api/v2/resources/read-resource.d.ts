@@ -11,7 +11,7 @@ export declare class ReadResource {
     incomingStillImageRepresentations: Array<ReadResource>;
     incomingLinks: Array<ReadResource>;
     stillImageRepresentationsToDisplay: StillImageRepresentation[];
-    readonly properties: ReadProperties;
+    readonly properties?: ReadProperties;
     /**
      *
      * @param {string} id the resource's Iri.

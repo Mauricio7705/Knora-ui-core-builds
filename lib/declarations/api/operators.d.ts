@@ -69,7 +69,7 @@ export declare class Match implements ComparisonOperator {
  */
 export declare class ComparisonOperatorAndValue {
     readonly comparisonOperator: ComparisonOperator;
-    readonly value: Value;
+    readonly value?: Value;
     constructor(comparisonOperator: ComparisonOperator, value?: Value);
 }
 /**
