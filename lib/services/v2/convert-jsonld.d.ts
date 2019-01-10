@@ -1,4 +1,4 @@
-import { ReadResourcesSequence } from '../../declarations';
+import { CountQueryResult, ReadResourcesSequence } from '../../declarations';
 /**
  * Contains methods to convert JSON-LD representing resources and properties to classes.
  * These methods works only for instances of resources and properties, not for ontologies (data model).
@@ -20,4 +20,12 @@ export declare module ConvertJSONLD {
      * @returns string[] - the resource class Iris (without duplicates).
      */
     function getResourceClassesFromJsonLD(resourcesResponseJSONLD: object): string[];
+    /**
+     * Turns a JSON-LD response to a count query into a `CountQueryResult`.
+     * Expects JSON-LD with all Iris fully expanded.
+     *
+     * @param countQueryJSONLD
+     * @returns {CountQueryResult}
+     */
+    function createCountQueryResult(countQueryJSONLD: object): CountQueryResult;
 }

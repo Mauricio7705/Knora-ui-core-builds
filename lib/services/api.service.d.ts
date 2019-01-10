@@ -1,6 +1,6 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
-import { ApiServiceError, KuiCoreConfig } from '../declarations';
+import { ApiServiceError, ApiServiceResult, KuiCoreConfig } from '../declarations';
 export declare abstract class ApiService {
     http: HttpClient;
     config: KuiCoreConfig;
@@ -9,10 +9,18 @@ export declare abstract class ApiService {
     /**
      * GET
      *
-     * @param {string} path
+     * @param {string} path the URL for the GET request.
+     * @param {HttpParams} params the parameters for the GET request.
      * @returns Observable of any
      */
-    httpGet(path: string, params?: any): Observable<any>;
+    httpGet(path: string, params?: HttpParams): Observable<any>;
+    /**
+     * Processes JSON-LD returned by Knora.
+     * Expands Iris and creates an empty context object.
+     *
+     * @param {ApiServiceResult} resourceResponse
+     */
+    protected processJSONLD(resourceResponse: ApiServiceResult): Observable<object>;
     /**
      * POST
      *

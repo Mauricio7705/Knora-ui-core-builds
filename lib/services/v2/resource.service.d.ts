@@ -1,15 +1,28 @@
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { ApiServiceError, ApiServiceResult, KuiCoreConfig, ReadResourcesSequence } from '../../declarations';
 import { ApiService } from '../api.service';
-import { ApiServiceResult } from '../../declarations';
+import { OntologyCacheService } from './ontology-cache.service';
 /**
  * Requests representation of resources from Knora.
  */
 export declare class ResourceService extends ApiService {
+    http: HttpClient;
+    config: KuiCoreConfig;
+    private _ontologyCacheService;
+    constructor(http: HttpClient, config: KuiCoreConfig, _ontologyCacheService: OntologyCacheService);
     /**
      * Given the Iri, requests the representation of a resource.
      *
-     * @param {string} iri Iri of the resource (already URL encoded).
+     * @param {string} iri Iri of the resource (not yet URL encoded).
      * @returns Observable<ApiServiceResult>
      */
-    getResource(iri: any): Observable<ApiServiceResult>;
+    getResource(iri: any): Observable<ApiServiceResult | ApiServiceError>;
+    /**
+     * Given the Iri, requests the representation of a resource as a `ReadResourceSequence`.
+     *
+     * @param {string} iri Iri of the resource (not yet URL encoded).
+     * @return {Observable<ReadResourcesSequence>}
+     */
+    getReadResource(iri: string): Observable<ReadResourcesSequence | ApiServiceError>;
 }

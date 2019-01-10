@@ -1,6 +1,6 @@
-import { ApiService } from '../api.service';
 import { Observable } from 'rxjs';
 import { ApiServiceResult } from '../../declarations';
+import { ApiService } from '../api.service';
 /**
  * Requests ontology information from Knora.
  */
