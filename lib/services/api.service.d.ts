@@ -1,6 +1,8 @@
 import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
-import { ApiServiceError, ApiServiceResult, KuiCoreConfig } from '../declarations';
+import { ApiServiceError } from '../declarations/api-service-error';
+import { ApiServiceResult } from '../declarations/api-service-result';
+import { KuiCoreConfig } from '../declarations/core.config';
 export declare abstract class ApiService {
     http: HttpClient;
     config: KuiCoreConfig;

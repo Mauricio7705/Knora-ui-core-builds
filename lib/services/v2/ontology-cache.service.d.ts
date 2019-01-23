@@ -114,6 +114,14 @@ export declare class OntologyInformation {
      */
     constructor(resourceClassesForOntology: ResourceClassIrisForOntology, resourceClasses: ResourceClasses, properties: Properties);
     /**
+     * Sorts an array of `ResourceClass` or `Property` by label.
+     *
+     * @param a first element
+     * @param b second element
+     * @return negative -1 if the first element is considered lower than the second, 1 if the second element is considered bigger, 0 if they are equal
+     */
+    static sortFunc(a: ResourceClass | Property, b: ResourceClass | Property): 1 | -1 | 0;
+    /**
      * Merge the given [[OntologyInformation]] into the current instance,
      * updating the existing information.
      * This is necessary when a service like the search fetches new results
@@ -139,9 +147,10 @@ export declare class OntologyInformation {
     /**
      * Returns all resource classes as an array.
      *
+     * @param {boolean} sortAsc sort resource classes by label in ascending order by default
      * @returns ResourceClass[]
      */
-    getResourceClassesAsArray(): Array<ResourceClass>;
+    getResourceClassesAsArray(sortAsc?: boolean): Array<ResourceClass>;
     /**
      * Returns a resource class's label.
      *
@@ -158,9 +167,10 @@ export declare class OntologyInformation {
     /**
      * Returns all properties as an array.
      *
+     * @param {boolean} sortAsc sort properties by label in ascending order by default
      * @returns Property[] - all properties as an array.
      */
-    getPropertiesAsArray(): Array<Property>;
+    getPropertiesAsArray(sortAsc?: boolean): Array<Property>;
     /**
      * Returns a property's label.
      *
