@@ -22,7 +22,7 @@ export declare class ResourceService extends ApiService {
      * Given the Iri, requests the representation of a resource as a `ReadResourceSequence`.
      *
      * @param {string} iri Iri of the resource (not yet URL encoded).
-     * @return {Observable<ReadResourcesSequence>}
+     * @returns {Observable<ReadResourcesSequence>}
      */
     getReadResource(iri: string): Observable<ReadResourcesSequence | ApiServiceError>;
 }

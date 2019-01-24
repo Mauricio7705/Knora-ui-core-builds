@@ -37,6 +37,7 @@ export declare class KnoraConstants {
     static ForbiddenResource: string;
     static XMLToStandoffMapping: string;
     static ListNode: string;
+    static ArkUrl: string;
     static ObjectType: string;
     static ResourceIcon: string;
     static isEditable: string;
@@ -47,7 +48,6 @@ export declare class KnoraConstants {
     static schemaNumberOfItems: string;
     static schemaItemListElement: string;
     static RdfProperty: string;
-    static RdfsSchema: string;
     static RdfsLabel: string;
     static RdfsComment: string;
     static RdfsSubclassOf: string;

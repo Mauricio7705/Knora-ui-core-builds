@@ -82,7 +82,3 @@ export * from './api/v2/count-query/count-query-result';
  */
 export * from './api/v2/still-image/still-image-representation';
 export * from './api/v2/still-image/image-region';
-/**
- * Interfaces for ontologies
- */
-export * from './api/v2/ontology/new-ontology';
