@@ -48,6 +48,7 @@ export declare class KnoraConstants {
     static schemaNumberOfItems: string;
     static schemaItemListElement: string;
     static RdfProperty: string;
+    static RdfsSchema: string;
     static RdfsLabel: string;
     static RdfsComment: string;
     static RdfsSubclassOf: string;
